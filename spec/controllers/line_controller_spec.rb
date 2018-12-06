@@ -10,4 +10,8 @@ RSpec.describe LineController, type: :controller do
     expect( @lineObj.simple_msg("OK")).to eq(message = {type: 'text',text: 'OK'})
   end
 
+  it "should return nil" do
+    expect( @lineObj.reply_to_line(nil)).to eq(nil)
+  end
+
 end
